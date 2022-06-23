@@ -1,36 +1,34 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "TalkingNPCBaseCharacter.h"
+#include "NPCBaseCharacter.h"
 #include "ReadyPlayerMeActorComponent.h"
-#include "OVRLipSyncPlaybackActorComponent.h"
 
 // Sets default values
-ATalkingNPCBaseCharacter::ATalkingNPCBaseCharacter()
+ANPCBaseCharacter::ANPCBaseCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	
 	ReadyPlayerMeComponent = CreateDefaultSubobject<UReadyPlayerMeActorComponent>(TEXT("ReadyPlayerMe"));
-	OVRLipSyncPlaybackComponent = CreateDefaultSubobject<UOVRLipSyncPlaybackActorComponent>(TEXT("LipSync"));
 }
 
 // Called when the game starts or when spawned
-void ATalkingNPCBaseCharacter::BeginPlay()
+void ANPCBaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void ATalkingNPCBaseCharacter::Tick(float DeltaTime)
+void ANPCBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
 // Called to bind functionality to input
-void ATalkingNPCBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ANPCBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 

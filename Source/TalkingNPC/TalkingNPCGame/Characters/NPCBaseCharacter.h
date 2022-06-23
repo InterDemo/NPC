@@ -4,22 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "TalkingNPCBaseCharacter.generated.h"
+#include "NPCBaseCharacter.generated.h"
 
 UCLASS()
-class TALKINGNPC_API ATalkingNPCBaseCharacter : public ACharacter
+class TALKINGNPC_API ANPCBaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	ATalkingNPCBaseCharacter();
+	ANPCBaseCharacter();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = ReadyPlayerMe, meta = (ExposeFunctionCategories = "Ready Player Me", AllowPrivateAccess = "true"))
 		class UReadyPlayerMeActorComponent* ReadyPlayerMeComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = ReadyPlayerMe, meta = (ExposeFunctionCategories = "LipSync", AllowPrivateAccess = "true"))
-		class UOVRLipSyncPlaybackActorComponent* OVRLipSyncPlaybackComponent;
 
 protected:
 	// Called when the game starts or when spawned
